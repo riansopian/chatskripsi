@@ -1,0 +1,50 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/libs/bootstrap/css/cerulean.bootstrap.min.css')
+		link(rel='stylesheet', href='/libs/bootstrap/css/bootstrap-responsive.min.css')
+		link(rel='stylesheet', href='/css/style.css')
+	body
+
+		.navbar.navbar-fixed-top
+			.navbar-inner
+				.container
+					.brand Chat
+
+		.container
+			.row
+				.content.chat
+					#messages.span8
+						#messages-inner.well
+						.puller ::::
+						
+						.input-append.well.well-large
+							input.span7#data(type='text')							
+							span.count 300
+							button.btn.btn-primary.smiley-holder(data-trigger="click", data-placement="top", data-html="true", data-title="Smileys")
+								i.icon-heart
+							button#datasend.btn.btn-success send
+					#users.sidebar-nav.span3.well
+						ul#user-list.nav.nav-list
+					.clearfix
+					
+		#login.modal.hide.fade(data-keyboard='false')
+			.modal-header Login
+			.modal-body
+				form.form-horizontal
+					.control-group
+						label.control-label(for='nickname') Enter your Nickname
+						div.controls
+							input(name='nickname', type='text', placeholder='Nickname')
+			.modal-footer
+				.btn.btn-primary Login
+		.smileyHider
+
+	script(src="/js/jquery-1.8.3.min.js")
+	script(src="/libs/bootstrap/js/bootstrap.min.js")
+	script(src="/libs/sugarjs/sugar.min.js")
+	script(src="/libs/socket.io/socket.io.min.js")
+	script(src="/js/chat.js")
+	script(src="/js/scrollTo.min.js")
+	script(src="/js/jquery.titlealert.js")

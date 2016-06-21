@@ -1,0 +1,12 @@
+{
+	"error.NoUsername" : "Please enter username",
+	"error.UsernameChoosen" : "Username choosen",
+	"error.toLongUsername" : "Username too long",
+	"error.toShortUsername" : "Username too short (Min. 4 Characther)",
+	"error.notLoggedIn" : "Login failed!",
+	"error.noMessage" : "Please enter your message",
+	"error.longMessage" : "Message too long",
+	"user.youConnected" : "Welcome to chat",
+	"user.hasConnected" : "{1} has online",
+	"user.logedout" : "{1} has offline"
+}
