@@ -2,18 +2,18 @@
 	"name": "Chat",
 	"description": "basic webapp with requirejs, jquery, grunt, fligh, sass, bower and bootstrap",
 	"version": "0.2.1",
-	//"homepage": "https://chatskripsi.herokuapp.com/",
+	"homepage": "https://chatskripsi.herokuapp.com/",
 	"license": "ISC",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/riansopian/chatskripsi"
 	},
-	// "dependencies": {
-	// 	"bbcode": "0.1.2",
-	// 	"socket.io": "0.9.12",	
-	// 	"express": "3.1.0",
-	// 	"jade": "1.9.2"
-	// },
+	"dependencies": {
+		"bbcode": "0.1.2",
+		"socket.io": "0.9.12",	
+		"express": "3.1.0",
+		"jade": "1.9.2"
+	},
 	"scripts": { 
 		"start" : "node app.js" 
 		},
