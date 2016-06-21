@@ -11,7 +11,7 @@ var express = require('express')
   , smileyParser = require('./lib/smileyParser.js')
   , stringUtil = require('./lib/stringUtil.js')
   , intNat = require('./lib/intNat.js')
-  , facebook = require('./lib/facebook.js')
+  //, facebook = require('./lib/facebook.js')
   , usernames = {}
   , messages = [];
 
@@ -61,9 +61,9 @@ server.listen(app.get('port'), function(){
 	console.log("Port: ", app.get('port'));
 });
 
-facebook.getFbData('USER_ACCESS_TOKEN', '/me/friends', function(data){
-    console.log(data);
-});
+// facebook.getFbData('USER_ACCESS_TOKEN', '/me/friends', function(data){
+//     console.log(data);
+// });
 
 function login(username) {
 	var socket = this;
