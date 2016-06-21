@@ -2,10 +2,11 @@
 	"name": "Chat",
 	"description": "basic webapp with requirejs, jquery, grunt, fligh, sass, bower and bootstrap",
 	"version": "0.2.1",
-	"homepage": "http://lottefriends.net",
+	"homepage": "https://chatskripsi.herokuapp.com/",
+	"license": "ISC",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/lotterfriends/node-chat"
+		"url": "https://github.com/riansopian/chatskripsi"
 	},
 	"dependencies": {
 		"bbcode": "0.1.2",
