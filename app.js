@@ -34,7 +34,7 @@ app.configure(function(){
 
 app.configure('development', function(){
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-	app.set('port', 1338);
+	app.set('port', process.env.PORT || 1338);
 	
 });
 
