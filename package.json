@@ -14,7 +14,8 @@
 		"express": "3.1.0",
 		"jade": "1.9.2"
 	},
+	"author": "riansopian",
 	"engines": {
-    	"node": ">= 5.11.1"
+    	"node": "4.1.1"
   	}
 }
