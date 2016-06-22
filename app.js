@@ -11,7 +11,7 @@ var express = require('express')
   , smileyParser = require('./lib/smileyParser.js')
   , stringUtil = require('./lib/stringUtil.js')
   , intNat = require('./lib/intNat.js')
-  //, facebook = require('./lib/facebook.js')
+  , facebook = require('./lib/facebook.js')
   , usernames = {}
   , messages = [];
 
@@ -34,16 +34,13 @@ app.configure(function(){
 
 app.configure('development', function(){
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-	app.set('port', process.env.PORT || 1338);
-	app.listen(app.get('port'));
+	app.set('port', process.env.PORT || 3000);
 	
 });
 
- 
-
 app.configure('production', function(){
 	app.use(express.errorHandler());
-	app.set('port', 1337);
+	app.set('port', 3000);
 	io.set('log level', 1);
 });
 
@@ -64,9 +61,9 @@ server.listen(app.get('port'), function(){
 	console.log("Port: ", app.get('port'));
 });
 
-// facebook.getFbData('USER_ACCESS_TOKEN', '/me/friends', function(data){
-//     console.log(data);
-// });
+facebook.getFbData('USER_ACCESS_TOKEN', '/me/friends', function(data){
+    console.log(data);
+});
 
 function login(username) {
 	var socket = this;
