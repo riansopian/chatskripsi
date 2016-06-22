@@ -38,6 +38,10 @@ app.configure('development', function(){
 	
 });
 
+server = app.listen(process.env.PORT || 1338, function(){
+   console.log('express server listening on port ' + server.address().port();
+})
+
 app.configure('production', function(){
 	app.use(express.errorHandler());
 	app.set('port', 1337);
