@@ -35,12 +35,11 @@ app.configure(function(){
 app.configure('development', function(){
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 	app.set('port', process.env.PORT || 1338);
+	app.listen(app.get('port'));
 	
 });
 
-server = app.listen(process.env.PORT || 1338, function(){
-   console.log('express server listening on port ' + server.address().port();
-})
+ 
 
 app.configure('production', function(){
 	app.use(express.errorHandler());
