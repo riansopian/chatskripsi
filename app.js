@@ -55,6 +55,11 @@ io.sockets.on('connection', function (socket) {
 	socket.on('loadSmileys', loadSmileys);
 });
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 // Start Server
 server.listen(app.get('port'), function(){
 	console.log("Enviroment: ", app.get('env'));
