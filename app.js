@@ -3,7 +3,7 @@
  */
 var express = require('express')
   , app = express()
-  , server = app.listen(3000)
+  , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , routes = require('./routes')
   , socket = require('socket.io')
@@ -31,9 +31,6 @@ app.configure(function(){
 	app.use(express.static(__dirname + '/public'));
 	intNat.load('de');
 });
-
-// var server    = app.listen(3033);
-// var io        = require('socket.io').listen(server);
 
 app.configure('development', function(){
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
