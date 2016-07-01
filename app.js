@@ -3,7 +3,7 @@
  */
 var express = require('express')
   , app = express()
-  , server = require('https').createServer(app)
+  , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , routes = require('./routes')
   , socket = require('socket.io')
