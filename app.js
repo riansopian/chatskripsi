@@ -55,6 +55,9 @@ io.sockets.on('connection', function (socket) {
 	socket.on('loadSmileys', loadSmileys);
 });
 
+if (window.location.protocol != "https:")
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+
 // Start Server
 server.listen(app.get('port'), function(){
 	console.log("Enviroment: ", app.get('env'));
