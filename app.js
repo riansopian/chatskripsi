@@ -3,7 +3,7 @@
  */
 var express = require('express')
   , app = express()
-  , server = require('https').createServer(app)
+  , server = require('http').createServer(app)
   , io = require('socket.io').listen(server)
   , routes = require('./routes')
   , socket = require('socket.io')
@@ -54,9 +54,6 @@ io.sockets.on('connection', function (socket) {
 	socket.on('disconnect', disconnect);
 	socket.on('loadSmileys', loadSmileys);
 });
-
-// if (window.location.protocol != "https:")
-//     window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
 
 // Start Server
 server.listen(app.get('port'), function(){
