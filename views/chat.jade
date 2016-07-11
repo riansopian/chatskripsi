@@ -35,7 +35,7 @@ html
 				form.form-horizontal
 					.control-group
 						label.control-label(for='nickname') Enter your Nickname
-						div.controls
+						div.controls.fb-like(data-share="true", data-width="450", data-show-faces="true")
 							input(name='nickname', type='text', placeholder='Nickname')
 			.modal-footer
 				.btn.btn-primary Login
@@ -48,3 +48,4 @@ html
 	script(src="../js/chat.js")
 	script(src="../js/scrollTo.min.js")
 	script(src="../js/jquery.titlealert.js")
+	script(src="../js/fb.js")
