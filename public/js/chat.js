@@ -71,7 +71,7 @@ function updateChat(username, message, time) {
 	$('#messages-inner').scrollTo($('#messages-inner .entry:last'));
 	focusSendField();
 	if (document[state] == "hidden") {		
-		$.titleAlert("Neue Nachricht!");
+		$.titleAlert("New Message!");
 	}
 }
 
